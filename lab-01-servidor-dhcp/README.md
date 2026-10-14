@@ -10,7 +10,6 @@ Configurar e validar a distribuição automática de endereços IP, máscara de 
 
 ## 📐 Topologia da Rede
 <img width="571" height="346" alt="Configurando DHCP" src="https://github.com/user-attachments/assets/0a810181-7075-46f4-aa64-1319fb366c97" />
-*(Aqui você colocará a captura de tela da topologia que desenhou no Packet Tracer)*
 <!-- Exemplo de como inserir a imagem depois de salvá-la na pasta "images" do seu repositório: -->
 ![Topologia da Rede DHCP](images/topologia-dhcp.png)
 
@@ -18,11 +17,11 @@ Configurar e validar a distribuição automática de endereços IP, máscara de 
 1. **Montagem da Topologia:** 
    * Conectamos os computadores ao Switch e o Servidor ao Switch utilizando cabos de rede adequados (Straight-through).
 2. **Configuração IP Estática do Servidor:** 
-   * Acessamos as configurações do Servidor na aba *Desktop -> IP Configuration* e definimos um endereço IP fixo 192.168.0.1 e a respectiva máscara de sub-rede.
+   * Acessamos as configurações do Servidor na aba *Desktop -> IP Configuration* e definimos um endereço IP fixo 192.168.0.1 e a respectiva máscara de sub-rede 255.255.255.0.
 3. **Ativação e Ajuste do Serviço DHCP:** 
    * No Servidor, abrimos a aba *Services* e selecionamos a opção **DHCP**.
    * O serviço foi ativado (Estado: *ON*).
-   * Configuramos o *Default Gateway* (`192.168.1.254`) e o IP inicial de distribuição (*Start IP Address*, ex: `192.168.1.10`).
+   * Configuramos o *Default Gateway* 192.168.0.1 e o IP inicial de distribuição 192.168.0.10.
    * Salvamos as configurações.
 4. **Validação nos Hosts Clientes:** 
    * Em cada computador cliente, alteramos a configuração de IP de *Static* para **DHCP** para testar a atribuição automática de endereço.
